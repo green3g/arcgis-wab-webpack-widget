@@ -1,4 +1,5 @@
 const path = require('path');
+const config = require('./config.json');
 
 module.exports = {
     mode: 'development',
@@ -14,7 +15,7 @@ module.exports = {
         library: 'app/main',
         libraryTarget: 'umd',
         path: path.resolve(__dirname, 'dist'),
-        publicPath: './widgets/Demo/dist/',
+        publicPath: config.publicPath,
     },
     module: {
         rules: [{
